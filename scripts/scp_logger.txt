@@ -1,0 +1,1 @@
+scp -r tb_logger izumi@pisces.arch.cs.kumamoto-u.ac.jp:/user/arch/izumi

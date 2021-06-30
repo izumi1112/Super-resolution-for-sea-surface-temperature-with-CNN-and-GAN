@@ -1,0 +1,27 @@
+name: rrdbnet_jp1_test_lr2mr
+suffix: ~  # add suffix to saved images
+model: sr
+distortion: sr
+scale: 2
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [1]
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: jp1_test_lr2mr
+    mode: LQGT
+    dataroot_GT: /workspace/sst_datasets/MR/jp1/test
+    dataroot_LQ: /workspace/sst_datasets/LR/jp1/test
+
+#### network structures
+network_G:
+  which_model_G: RRDBNet
+  in_nc: 1
+  out_nc: 1
+  nf: 64
+  nb: 23
+  upscale: 2
+
+#### path
+path:
+        pretrain_model_G: /workspace/experiments/rrdbnet_jp1_train_lr2mr/models/15517_G.pth

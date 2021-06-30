@@ -1,0 +1,6 @@
+export PYTHONPATH="/root/anaconda3/bin/python"
+export CUDA_VISIBLE_DEVICES=0,1
+python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train/StyleGAN/train_StyleGAN2_256_Cmul2_FFHQ_800k.yml --launcher pytorch
+
+python -m torch.distributed.launch --nproc_per_node=2 --master_port=4321 basicsr/test.py -opt options/test/ESRGAN/test_ESRGAN_x4.yml --launcher pytorch
+python -m torch.distributed.launch --nproc_per_node=2 --master_port=4321 basicsr/train.py -opt options/train/ESRGAN/train_RRDBNet_PSNR_x4.yml --launcher pytorch

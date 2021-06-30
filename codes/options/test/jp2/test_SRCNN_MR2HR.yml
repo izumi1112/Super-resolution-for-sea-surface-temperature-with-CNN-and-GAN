@@ -1,0 +1,26 @@
+name: srcnn_jp2_test_mr2hr
+suffix: ~  # add suffix to saved images
+model: sr
+distortion: sr
+scale: 2
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [1]
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: jp2_test_mr2hr
+    mode: LQGT
+    dataroot_GT: /workspace/sst_datasets/HR/jp2/test
+    dataroot_LQ: /workspace/results/srcnn_jp2_test_lr2mr/jp2_test_lr2mr # /workspace/sst_datasets/LR/jp2/test
+
+network_G:
+  which_model_G: SRCNN
+  in_nc: 1
+  out_nc: 1
+  nf: 64
+  nb: 16
+  upscale: 2
+
+#### path
+path:
+  pretrain_model_G: /workspace/experiments/srcnn_jp2_train_mr2hr/models/24985_G.pth
