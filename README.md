@@ -9,7 +9,7 @@
 https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-20c
 ### OISST
 https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html
-## Train and Test
+## Train and Test example
 ### Train
 `python train.py -opt options/train/jp1/train_SRCNN_LR2HR.yml`
 ### Test
