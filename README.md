@@ -5,6 +5,7 @@
 - NVIDIA GPU + CUDA
 - Python packages: `pip install numpy opencv-python lmdb pyyaml tb-nightly future`
 ## Datasets
+Each dataset needs to be cut out for each area, normalized to 0 to 1, and converted to npy files for each day.
 ### ERA20C
 https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-20c
 ### OISST
