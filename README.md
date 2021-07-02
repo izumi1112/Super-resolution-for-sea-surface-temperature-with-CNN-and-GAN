@@ -19,6 +19,7 @@ https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html
 ### Learned Perceptual Image Patch Similarity
 https://github.com/richzhang/PerceptualSimilarity
 ### Perceptual Index
-https://github.com/roimehrez/PIRM2018
+https://github.com/roimehrez/PIRM2018<br>
+To use the Perceptual Index, the data needs to be zero padding to 96x96.
 ## The original program
 https://github.com/xinntao/BasicSR/tree/v0.1
